@@ -4,10 +4,15 @@
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
 
 export function getClientsWithLetterInName(array, letter) {
-  // Your code goes here...
+	const cusWithLetter = [];
 
+	for (let user of array)
+		for (let l of user.name)
+			if (l.toLowerCase() === letter.toLowerCase()) {
+				cusWithLetter.push(user.name);
+			}
+	return cusWithLetter;
 }
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
 // If the test has all tests passed, switch to the next exercise file
