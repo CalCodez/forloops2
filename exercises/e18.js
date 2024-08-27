@@ -5,7 +5,21 @@
 // NOTE: You can NOT use the array.join(), array.toString(), and array.replace() methods in your code
 
 export function joinToString(array, separator) {
-	return array;
+	const devStatement = [];
+	let resultString = '';
+
+	for (let i = 0; i < array.length; i++) {
+		let statement = array[i];
+		devStatement.push(statement);
+	}
+
+	for (let i = 0; i < devStatement.length; i++) {
+		resultString += devStatement[i];
+		if (i !== devStatement.length - 1) {
+			resultString += separator;
+		}
+	}
+	return resultString;
 }
 
 // === TEST YOURSELF ===
